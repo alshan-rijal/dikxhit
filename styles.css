@@ -470,6 +470,25 @@ body.letter-focus::before {
     display: none !important;
 }
 
+.page-watermark {
+    position: fixed;
+    right: 12px;
+    bottom: 10px;
+    margin: 0;
+    padding: 4px 8px;
+    font-size: 0.74rem;
+    line-height: 1.2;
+    color: rgba(18, 36, 24, 0.62);
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 60;
+    pointer-events: none;
+    user-select: none;
+}
+
 @keyframes pulse {
     0% { transform: translateX(-50%) scale(1); }
     50% { transform: translateX(-50%) scale(1.06); }
