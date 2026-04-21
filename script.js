@@ -1,4 +1,4 @@
-const PIN_CODE = "57472";
+const PIN_CODE = "574742";
 
 const pinPanel = document.getElementById("pinPanel");
 const pinInput = document.getElementById("pinInput");
@@ -248,7 +248,7 @@ function checkPin() {
 
 function toggleEnvelope() {
     if (!isUnlocked) {
-        setError("Enter PIN 1234 to unlock the envelope.");
+        setError("Enter the correct PIN to unlock the envelope.");
         pinInput.focus();
         return;
     }

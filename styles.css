@@ -489,6 +489,115 @@ body.letter-focus::before {
     user-select: none;
 }
 
+@media (max-width: 640px) {
+    .page {
+        min-height: 100dvh;
+        padding: 10px;
+        padding-bottom: 42px;
+    }
+
+    .scene {
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 18px;
+    }
+
+    .badge {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .pin-panel {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .pin-input,
+    .pin-btn {
+        min-height: 44px;
+    }
+
+    .pin-row {
+        flex-direction: column;
+    }
+
+    .pin-btn {
+        width: 100%;
+    }
+
+    .envelope-wrap {
+        min-height: 350px;
+    }
+
+    .envelope {
+        height: min(56vh, 380px);
+    }
+
+    .seal {
+        top: 72px;
+        width: 64px;
+        height: 64px;
+        font-size: 1.7rem;
+    }
+
+    .letter {
+        width: calc(100% - 24px);
+        padding: 10px 10px 12px;
+    }
+
+    .close-letter-btn {
+        padding: 7px 12px;
+        font-size: 0.86rem;
+        margin-bottom: 8px;
+    }
+
+    .letter-copy h2 {
+        font-size: 1.03rem;
+    }
+
+    .exact-message {
+        font-size: 0.91rem;
+        line-height: 1.54;
+    }
+
+    .envelope.open .letter {
+        width: calc(100vw - 12px);
+        height: min(88dvh, 840px);
+        max-height: 88dvh;
+        border-radius: 14px;
+    }
+
+    .page-watermark {
+        right: 8px;
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 6px);
+        font-size: 0.66rem;
+        padding: 3px 7px;
+    }
+}
+
+@media (max-width: 400px) {
+    .badge {
+        font-size: 0.84rem;
+    }
+
+    .pin-title {
+        font-size: 0.98rem;
+    }
+
+    .envelope {
+        height: min(54vh, 350px);
+    }
+
+    .photo-card {
+        min-height: 220px;
+    }
+
+    .exact-message {
+        font-size: 0.88rem;
+    }
+}
+
 @keyframes pulse {
     0% { transform: translateX(-50%) scale(1); }
     50% { transform: translateX(-50%) scale(1.06); }
@@ -544,7 +653,7 @@ body.letter-focus::before {
     }
 }
 
-@media (max-width: 760px) {
+@media (min-width: 641px) and (max-width: 760px) {
     .envelope {
         height: 420px;
     }
@@ -573,17 +682,9 @@ body.letter-focus::before {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 401px) and (max-width: 480px) {
     .page {
         padding: 14px;
-    }
-
-    .pin-row {
-        flex-direction: column;
-    }
-
-    .pin-btn {
-        width: 100%;
     }
 
     .letter-copy p {
